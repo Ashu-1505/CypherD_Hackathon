@@ -1,21 +1,52 @@
-# React + Vite
+# CypherD Hackathon - Mock Web3 Wallet
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple **Web3 wallet simulation** built with **React (frontend)**, **Flask (backend)**, and **Supabase (PostgreSQL)**.  
+This project allows users to create/import wallets, view balances, send mock ETH, and see transaction history.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🛠 Tech Stack
 
-## React Compiler
+- **Frontend:** React, Axios, TailwindCSS (optional)  
+- **Backend:** Python, Flask, Flask-CORS  
+- **Database:** Supabase PostgreSQL  
+- **Extras:** Axios for API calls, Digital signatures simulated for transfers  
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 📦 Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1. **Create Wallet**  
+   - Generate a new 12-word mnemonic phrase.  
+   - Derive a unique Ethereum address.  
+   - Store wallet in Supabase with initial mock ETH balance.
 
-#Creating the Wallet by 12 word mnemonic.
+2. **Import Wallet**  
+   - Retrieve wallet using a known 12-word mnemonic phrase.  
+
+3. **View Balance**  
+   - Display current mock ETH balance for the wallet.
+
+4. **Send Mock ETH**  
+   - Send ETH to another wallet address.  
+   - Supports ETH and USD input (ETH conversion can be added later).  
+   - Simulates digital signature verification.
+
+5. **Transaction History**  
+   - View past transactions (sender, recipient, amount, timestamp).
+
+---
+
+## ⚡ Setup Instructions
+
+### 1. Clone Repository
+
+
+git clone https://github.com/<your-username>/CypherD_Hackathon.git
+cd CypherD_Hackathon
+
+
+# Creating the Wallet by 12 word mnemonic.
 <img width="1440" height="900" alt="Screenshot 2025-10-05 at 2 10 10 PM" src="https://github.com/user-attachments/assets/e99e83a0-838c-4e80-8e6c-a1d7f29f3896" />
 <img width="1440" height="900" alt="Screenshot 2025-10-05 at 2 09 55 PM" src="https://github.com/user-attachments/assets/49a9a4f9-1bcc-4589-8fa8-e4272ab19818" />
 <img width="1440" height="900" alt="Screenshot 2025-10-05 at 2 09 46 PM" src="https://github.com/user-attachments/assets/9f61e847-7483-451c-add3-37d6c629e003" />
